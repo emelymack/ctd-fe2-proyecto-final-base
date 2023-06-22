@@ -12,7 +12,7 @@ Examen Final de Frontend V
   - [Funcionalidades](#funcionalidades)
     - [Funcionalidades obligatorias](#funcionalidades-obligatorias)
     - [_Seccion 1: Citas de los Simpsons._](#seccion-1-citas-de-los-simpsons)
-    - [_Seccion 2: Bio._](#seccion-2-bio)
+    - [_Seccion 2: Bio._ ✅](#seccion-2-bio-)
     - [_Seccion 3: Noticias._](#seccion-3-noticias)
   - [Desarrollo](#desarrollo)
     - [Iniciando la App](#iniciando-la-app)
@@ -25,7 +25,7 @@ Examen Final de Frontend V
     - [Paso 0 - Instalación](#paso-0---instalación)
     - [Paso 1 - Creación de custom render](#paso-1---creación-de-custom-render)
     - [Paso 2 - Escribimos los test del componente Quote.tsx](#paso-2---escribimos-los-test-del-componente-quotetsx)
-    - [Paso 3 - Styled Components](#paso-3---styled-components)
+    - [Paso 3 - Styled Components ✅](#paso-3---styled-components-)
     - [Paso 4 - Noticias](#paso-4---noticias)
 
 ## Requisitos
@@ -89,7 +89,7 @@ Las siguientes funcionalidades son requisitos mínimos necesarios para la aproba
 
     El código base de esta sección se encuentra dentro de src/features/quotes. Allí encontrarás el componente y demás utilidades a tener en cuenta para escribir los tests.
 
-### _Seccion 2: Bio._
+### _Seccion 2: Bio._ ✅
 
     En esta parte se presenta una sección que tiene una botonera que permite alternar entre la biografía de cada personaje. En este caso, lo que pretendemos es maquetar la sección usando Styled Components.
 
@@ -225,7 +225,7 @@ Luego, podrás comenzar a escribir los _test cases_ del componente. Para ello, t
 **Importante**
 Recuerda evaluar el nivel de cóverage de tus test, ya que para poder aprobar esta consigna deberás tener al menos un 50%. Para ello, puedes agregar el flag _--coverage_ al momento de correr el test.
 
-### Paso 3 - Styled Components
+### Paso 3 - Styled Components ✅
 
 Para resolver la segunda consigna deberás ubicarte en la carpeta _src/features/bio_. Allí, crearemos un archivo _styled.ts_, dentro del cual se encontrarán los componentes que deberás crear utilizando **Styled Components**.
 
