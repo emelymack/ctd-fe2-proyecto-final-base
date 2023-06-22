@@ -4,24 +4,29 @@ Examen Final de Frontend V
 
 ## Indice
 
-- [Requisitos](#requisitos)
-  - [Condiciones mínimas de aprobación](#condiciones-mínimas-de-aprobación)
-  - [Aspectos que modifican la valoración final de la nota](#aspectos-que-modifican-la-valoración-final-de-la-nota)
-- [Funcionalidades](#funcionalidades)
-  - [Funcionalidades obligatorias](#funcionalidades-obligatorias)
-- [Desarrollo](#desarrollo)
-  - [Iniciando la App](#iniciando-la-app)
-  - [Dependencias](#dependencias)
-  - [Dependencias de Desarrollo](#dependencias-de-desarrollo)
-- [Entrega](#entrega)
-  - [Fecha de Entrega](#fecha-de-entrega)
-  - [Formato de Entrega](#formato-de-entrega)
-- [Guía para comenzar](#guía-para-comenzar)
-  - [Paso 0 - Instalación](#paso-0---instalación)
-  - [Paso 1 - Creación de Custom Render](#paso-1---creación-de-custom-render)
-  - [Paso 2 - Escribimos los test del componente Quote.tsx](#paso-2---escribimos-los-test-del-componente-quote.tsx)
-  - [Paso 3 - Styled Components](#paso-3---styled-components)
-  - [Paso 4 - Noticias](#paso-4---noticias)
+- [ctd-esp-fe2-final](#ctd-esp-fe2-final)
+  - [Indice](#indice)
+  - [Requisitos](#requisitos)
+    - [Condiciones mínimas de aprobación](#condiciones-mínimas-de-aprobación)
+    - [Aspectos que modifican la valoración final de la nota](#aspectos-que-modifican-la-valoración-final-de-la-nota)
+  - [Funcionalidades](#funcionalidades)
+    - [Funcionalidades obligatorias](#funcionalidades-obligatorias)
+    - [_Seccion 1: Citas de los Simpsons._](#seccion-1-citas-de-los-simpsons)
+    - [_Seccion 2: Bio._](#seccion-2-bio)
+    - [_Seccion 3: Noticias._](#seccion-3-noticias)
+  - [Desarrollo](#desarrollo)
+    - [Iniciando la App](#iniciando-la-app)
+    - [Dependencias](#dependencias)
+    - [Dependencias de Desarrollo](#dependencias-de-desarrollo)
+  - [Entrega](#entrega)
+    - [Fecha de Entrega](#fecha-de-entrega)
+    - [Formato de Entrega](#formato-de-entrega)
+  - [Guía para comenzar](#guía-para-comenzar)
+    - [Paso 0 - Instalación](#paso-0---instalación)
+    - [Paso 1 - Creación de custom render](#paso-1---creación-de-custom-render)
+    - [Paso 2 - Escribimos los test del componente Quote.tsx](#paso-2---escribimos-los-test-del-componente-quotetsx)
+    - [Paso 3 - Styled Components](#paso-3---styled-components)
+    - [Paso 4 - Noticias](#paso-4---noticias)
 
 ## Requisitos
 
@@ -53,7 +58,7 @@ Los siguientes aspectos son _extras_ al requisito mínimo de aprobación que ser
       * Se valorará el correcto uso de la documentación en todas las funciones y componentes en caso de ser necesario.
 
     Validaciones
-      * Se valorará el agregado de validaciones de flujos alternativos al normal y el manejo de errores en las distintas funcionalidades implementadas.
+      * Se valorará el agregado de validaciones de flujos alternativos al normal y el manejo de errores en las distintas funcionalidades implementadas. ((ERROR BOUNDARY))
 
     Testing unitario y coverage
       * Se valorará el correcto uso del testing unitario y el incremento del porcentaje de cobertura de código (coverage) más allá del 50%.
@@ -99,7 +104,7 @@ Las siguientes funcionalidades son requisitos mínimos necesarios para la aproba
     Si puede, al hacer clic en el botón “Ver más” se abre un modal con el detalle completo de la noticia.
     Si no, se abre un modal que invita al usuario a suscribirse.
 
-    El código base de esta sección se encuentra dentro de la carpeta src/features/news. Allí encontrarás el archivo Noticias.jsx, dentro del cual puede verse que hay múltiples componentes y funciones que realizan tareas sobre la información. En este caso, el requerimiento consiste en refactorizar el código aplicando los principios y buenas prácticas que hemos visto a lo largo de la cursada. En especial, se espera que puedas aplicar los principios SOLID durante el proceso de refactorización. A tal fin, está permitido crear nuevos archivos dentro de la carpeta “news”, en caso de que lo consideres necesario para extraer cierta lógica del código. Sin embargo, debe tenerse en cuenta que solo debe trabajarse sobre el archivo Noticias.jsx. No deberá modificarse el contenido de los archivos fakeRest.ts y styled.ts, ya que ello no forma parte de la consigna.
+    El código base de esta sección se encuentra dentro de la carpeta src/features/news. Allí encontrarás el archivo Noticias.jsx, dentro del cual puede verse que hay múltiples componentes y funciones que realizan tareas sobre la información. En este caso, el requerimiento consiste en refactorizar el código aplicando los principios y buenas prácticas que hemos visto a lo largo de la cursada. En especial, se espera que puedas aplicar los principios SOLID durante el proceso de refactorización. A tal fin, está permitido crear nuevos archivos dentro de la carpeta “news”, en caso de que lo consideres necesario para extraer cierta lógica del código. Sin embargo, debe tenerse en cuenta que solo debe trabajarse sobre el archivo Noticias.jsx. No deberá modificarse el contenido de los archivos fakeRest.ts y styled.ts, ya que ello no forma parte de la consigna. ((SINGLE RESPONSIBILITY Y 1 MAS))
 
 ## Desarrollo
 
