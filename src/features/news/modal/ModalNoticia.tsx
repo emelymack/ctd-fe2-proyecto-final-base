@@ -1,6 +1,6 @@
 import ContainerModal from './ContainerModal'
 import { ContenedorTexto, DescripcionModal, ImagenModal, TituloModal } from '../styled'
-import { IModalNoticia } from '../../quote/types';
+import { IModalNoticia } from '../types';
 
 const ModalNoticia = ({onClose, noticia}: IModalNoticia) => {
   return (

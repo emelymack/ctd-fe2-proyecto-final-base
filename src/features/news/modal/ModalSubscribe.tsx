@@ -1,7 +1,7 @@
 import ContainerModal from './ContainerModal'
 import { BotonSuscribir, ContenedorTexto, DescripcionModal, ImagenModal, TituloModal } from '../styled'
 import { SuscribeImage } from "../../../assets";
-import { IModalSubscribe } from '../../quote/types';
+import { IModalSubscribe } from '../types';
 
 const ModalSubscribe = ({onClose, onSubscribe}: IModalSubscribe) => {
   return (

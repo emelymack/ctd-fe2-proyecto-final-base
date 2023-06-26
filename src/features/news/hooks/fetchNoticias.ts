@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { obtenerNoticias } from "../fakeRest";
 import { INoticiasNormalizadas } from "../Noticias";
-import { capitalize, getMinutosTranscurridos } from "../../quote/utils";
+import { capitalize, getMinutosTranscurridos } from '../../../app/utils';
 
 export const obtenerInformacion = async (setNoticias: Dispatch<SetStateAction<INoticiasNormalizadas[]>>) => {
   const respuesta = await obtenerNoticias();
