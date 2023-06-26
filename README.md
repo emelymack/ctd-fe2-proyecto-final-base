@@ -13,7 +13,7 @@ Examen Final de Frontend V
     - [Funcionalidades obligatorias](#funcionalidades-obligatorias)
     - [_Seccion 1: Citas de los Simpsons._](#seccion-1-citas-de-los-simpsons)
     - [_Seccion 2: Bio._ ✅](#seccion-2-bio-)
-    - [_Seccion 3: Noticias._](#seccion-3-noticias)
+    - [\_Seccion 3: Noticias.\_✅](#_seccion-3-noticias_)
   - [Desarrollo](#desarrollo)
     - [Iniciando la App](#iniciando-la-app)
     - [Dependencias](#dependencias)
@@ -26,7 +26,7 @@ Examen Final de Frontend V
     - [Paso 1 - Creación de custom render](#paso-1---creación-de-custom-render)
     - [Paso 2 - Escribimos los test del componente Quote.tsx](#paso-2---escribimos-los-test-del-componente-quotetsx)
     - [Paso 3 - Styled Components ✅](#paso-3---styled-components-)
-    - [Paso 4 - Noticias](#paso-4---noticias)
+    - [Paso 4 - Noticias ✅](#paso-4---noticias-)
 
 ## Requisitos
 
@@ -97,14 +97,14 @@ Las siguientes funcionalidades son requisitos mínimos necesarios para la aproba
 
     El código base para trabajar en esta sección se encuentra en src/features/bio. El componente se encuentra funcionando según lo esperado, por lo que es importante verificar que dicha funcionalidad no haya sido afectada luego de la refactorización.
 
-### _Seccion 3: Noticias._
+### _Seccion 3: Noticias._✅
 
     Esta sección presenta un listado de noticias acerca de Los Simpsons. Cada noticia tiene una prop esPremium que determina si el usuario puede acceder a la misma o no.
 
     Si puede, al hacer clic en el botón “Ver más” se abre un modal con el detalle completo de la noticia.
     Si no, se abre un modal que invita al usuario a suscribirse.
 
-    El código base de esta sección se encuentra dentro de la carpeta src/features/news. Allí encontrarás el archivo Noticias.jsx, dentro del cual puede verse que hay múltiples componentes y funciones que realizan tareas sobre la información. En este caso, el requerimiento consiste en refactorizar el código aplicando los principios y buenas prácticas que hemos visto a lo largo de la cursada. En especial, se espera que puedas aplicar los principios SOLID durante el proceso de refactorización. A tal fin, está permitido crear nuevos archivos dentro de la carpeta “news”, en caso de que lo consideres necesario para extraer cierta lógica del código. Sin embargo, debe tenerse en cuenta que solo debe trabajarse sobre el archivo Noticias.jsx. No deberá modificarse el contenido de los archivos fakeRest.ts y styled.ts, ya que ello no forma parte de la consigna. ((SINGLE RESPONSIBILITY Y 1 MAS))
+    El código base de esta sección se encuentra dentro de la carpeta src/features/news. Allí encontrarás el archivo Noticias.jsx, dentro del cual puede verse que hay múltiples componentes y funciones que realizan tareas sobre la información. En este caso, el requerimiento consiste en refactorizar el código aplicando los principios y buenas prácticas que hemos visto a lo largo de la cursada. En especial, se espera que puedas aplicar los principios SOLID durante el proceso de refactorización. A tal fin, está permitido crear nuevos archivos dentro de la carpeta “news”, en caso de que lo consideres necesario para extraer cierta lógica del código. Sin embargo, debe tenerse en cuenta que solo debe trabajarse sobre el archivo Noticias.jsx. No deberá modificarse el contenido de los archivos fakeRest.ts y styled.ts, ya que ello no forma parte de la consigna.
 
 ## Desarrollo
 
@@ -237,7 +237,7 @@ Para ello, puedes utilizar el valor de la variable _bioActiva_ que se encuentra 
 **Importante**
 Esta sección se encuentra funcionando correctamente en el código base. Es importante verificar el comportamiento actual antes de proceder a refactorizarlo, de forma tal que una vez realizada la consigna, puedas testear que la sección sigue comportándose de la misma manera.
 
-### Paso 4 - Noticias
+### Paso 4 - Noticias ✅
 
 Dentro de la carpeta _src/features/news_, encontraremos el archivo
 _Noticias.tsx_. Allí, se encuentra toda la lógica de esta sección.
