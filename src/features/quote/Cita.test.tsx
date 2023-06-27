@@ -2,11 +2,10 @@ import { act, cleanup, findByRole, render } from "../../test/test-utils"
 import { screen } from "../../test/test-utils"
 import userEvent from '@testing-library/user-event';
 import Cita from "./Cita"
-import { useDispatch, useSelector } from "react-redux";
-import { server } from "../../test/mocks/server";
+import { server } from "../../test/server/server";
 import { rest } from "msw";
 import { API_URL } from "../../app/constants";
-import { mockResponse, mockResponseHomerSimpson } from "../../test/mocks/handlers";
+import { mockResponse, mockResponseHomerSimpson } from "../../test/mocks/mocks";
 
 
 describe("Cita", () => {
@@ -77,7 +76,7 @@ describe("Cita", () => {
 
     act(() => {
       server.use(
-        rest.get(`${API_URL}?character=Homer `, (req, res, ctx) => {
+        rest.get(`${API_URL}?character=123`, (req, res, ctx) => {
           return res(
             ctx.status(400),
             ctx.text("El nombre debe ser un texto"),

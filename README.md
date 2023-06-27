@@ -11,7 +11,7 @@ Examen Final de Frontend V
     - [Aspectos que modifican la valoración final de la nota](#aspectos-que-modifican-la-valoración-final-de-la-nota)
   - [Funcionalidades](#funcionalidades)
     - [Funcionalidades obligatorias](#funcionalidades-obligatorias)
-    - [_Seccion 1: Citas de los Simpsons._](#seccion-1-citas-de-los-simpsons)
+    - [_Seccion 1: Citas de los Simpsons._ ✅](#seccion-1-citas-de-los-simpsons-)
     - [_Seccion 2: Bio._ ✅](#seccion-2-bio-)
     - [\_Seccion 3: Noticias.\_✅](#_seccion-3-noticias_)
   - [Desarrollo](#desarrollo)
@@ -23,8 +23,8 @@ Examen Final de Frontend V
     - [Formato de Entrega](#formato-de-entrega)
   - [Guía para comenzar](#guía-para-comenzar)
     - [Paso 0 - Instalación](#paso-0---instalación)
-    - [Paso 1 - Creación de custom render](#paso-1---creación-de-custom-render)
-    - [Paso 2 - Escribimos los test del componente Quote.tsx](#paso-2---escribimos-los-test-del-componente-quotetsx)
+    - [Paso 1 - Creación de custom render ✅](#paso-1---creación-de-custom-render-)
+    - [Paso 2 - Escribimos los test del componente Quote.tsx ✅](#paso-2---escribimos-los-test-del-componente-quotetsx-)
     - [Paso 3 - Styled Components ✅](#paso-3---styled-components-)
     - [Paso 4 - Noticias ✅](#paso-4---noticias-)
 
@@ -72,7 +72,7 @@ Los siguientes aspectos son _extras_ al requisito mínimo de aprobación que ser
 
 Las siguientes funcionalidades son requisitos mínimos necesarios para la aprobación del final y es fundamental que funcionen correctamente.
 
-### _Seccion 1: Citas de los Simpsons._
+### _Seccion 1: Citas de los Simpsons._ ✅
 
     En esta sección, el usuario cuenta con la posibilidad de obtener citas de Los Simpsons. Hay dos maneras:
 
@@ -167,7 +167,7 @@ Instalar MSW (si vas a utilizar otra librería puedes saltear este paso)
 
 `npm install msw --save-dev`
 
-### Paso 1 - Creación de custom render
+### Paso 1 - Creación de custom render ✅
 
 El primer paso para poder escribir y correr nuestros test correctamente, consiste en crear un custom render que nos permita "envolver" los componentes que vamos a testear dentro del provider de Redux. Para ello, crearemos un archivo test-utils.tsx dentro de la carpeta _src_. Dentro del mismo, importamos las dependencias y creamos el custom render:
 
@@ -215,7 +215,7 @@ export { customRender as render };
 
 ```
 
-### Paso 2 - Escribimos los test del componente Quote.tsx
+### Paso 2 - Escribimos los test del componente Quote.tsx ✅
 
 Para resolver la primera consigna, deberás ubicarte en la carpeta _src/features/quote_ y, allí, crear un nuevo archivo _Quote.test.tsx_.
 
