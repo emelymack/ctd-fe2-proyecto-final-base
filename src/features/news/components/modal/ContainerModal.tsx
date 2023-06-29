@@ -1,5 +1,5 @@
-import { CloseButton, ContenedorModal, TarjetaModal } from '../styled';
-import { CloseButton as Close } from "../../../assets";
+import { CloseButton, ContenedorModal, TarjetaModal } from '../../styled';
+import { CloseButton as Close } from "../../../../assets";
 import { ReactNode } from 'react';
 
 interface Props {

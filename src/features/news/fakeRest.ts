@@ -1,11 +1,4 @@
-export interface INoticias {
-  id: number;
-  titulo: string;
-  descripcion: string;
-  fecha: Date;
-  esPremium: boolean;
-  imagen: string;
-}
+import { INoticias } from "./types";
 
 const simularTiempoTranscurrido: (decrementMiliseconds: number) => Date = (
   decrementMiliseconds
@@ -63,9 +56,10 @@ const data = [
 ];
 
 export const obtenerNoticias: () => Promise<INoticias[]> = async () => {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(data);
-    }, 1000);
+      // reject(new Error('Error fetching noticias'))
+    }, 1500);
   });
 };

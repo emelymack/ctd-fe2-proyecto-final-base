@@ -1,28 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ContenedorNoticias,
   ListaNoticias,
   TituloNoticias,
-} from "./styled";
+} from "../styled";
 import Noticia from "./Noticia";
-import useGetNoticias from "./hooks/useGetNoticias";
+import useGetNoticias from "../hooks/useGetNoticias";
 import ModalSubscribe from "./modal/ModalSubscribe";
 import ModalNoticia from "./modal/ModalNoticia";
+import { INoticiasNormalizadas } from "../types";
+import Loading from "./Loading";
+import ErrorFallback from "../../ErrorBoundary/ErrorFallback";
 
 /* applied Single Responsibility Principle, Interface Segregation Principle, Dependency Inversion Principle, Open/Closed Principle in news folder */
-
-export interface INoticiasNormalizadas {
-  id: number;
-  titulo: string;
-  descripcion: string;
-  fecha: number | string;
-  esPremium: boolean;
-  imagen: string;
-  descripcionCorta?: string;
-}
-
 const Noticias = () => {
-  const noticias = useGetNoticias()
+  const { noticias, error, isLoading } = useGetNoticias()
   const [ modalVisible, setModalVisible ] = useState(false);
   const [ noticiaSeleccionada, setNoticiaSeleccionada ] = useState<INoticiasNormalizadas | null>(null)
   const [ ,setModal] = useState<INoticiasNormalizadas | null>(null);
@@ -44,6 +36,15 @@ const Noticias = () => {
     }, 1000)
   }
 
+  useEffect(() => {
+    console.log({noticias, error, isLoading});
+  }, [noticias])
+
+  if(isLoading) return ( <Loading /> )
+  if(error) return (
+    <ErrorFallback />
+  )
+
   return (
     <ContenedorNoticias>
       <TituloNoticias>Noticias de los Simpsons</TituloNoticias>
@@ -52,12 +53,9 @@ const Noticias = () => {
           <Noticia key={noticia.id} data={noticia} onClick={() => showModal(noticia)} />
         ))}
         {modalVisible && 
-          noticiaSeleccionada && 
-          (noticiaSeleccionada.esPremium &&
-            <ModalSubscribe onSubscribe={subscribe} onClose={closeModal} /> 
-          || 
-          !noticiaSeleccionada.esPremium &&
-            <ModalNoticia noticia={noticiaSeleccionada} onClose={closeModal} />
+          (
+            noticiaSeleccionada?.esPremium && <ModalSubscribe onSubscribe={subscribe} onClose={closeModal} /> 
+            || <ModalNoticia noticia={noticiaSeleccionada} onClose={closeModal} />
           )
         }
       </ListaNoticias>

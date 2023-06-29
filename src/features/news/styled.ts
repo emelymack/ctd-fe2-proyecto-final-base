@@ -207,3 +207,18 @@ export const BotonSuscribir = styled.button`
   font-weight: bold;
   font-family: "Homer Simpson Revised", sans-serif;
 `;
+
+export const LoadingContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const LoadingTitle = styled.h2`
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: rgb(253, 216, 53);
+  text-shadow: rgb(0, 0, 0) 2px 2px 0px, rgb(0, 0, 0) 2px -2px 0px, rgb(0, 0, 0) -2px 2px 0px, rgb(0, 0, 0) -2px -2px 0px, rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 0px 2px 0px, rgb(0, 0, 0) -2px 0px 0px, rgb(0, 0, 0) 0px -2px 0px;
+  letter-spacing: 0.1rem;
+`

@@ -7,8 +7,8 @@ import {
   limpiar,
   obtenerEstadoDelPedido,
   obtenerCitaDeLaAPI,
-} from "./citaSlice";
-import { obtenerMensaje } from "./utils";
+} from "./redux/citaSlice";
+import { obtenerMensaje } from "./utils/utils";
 
 function Cita() {
   const [valorInput, setValorInput] = useState("");

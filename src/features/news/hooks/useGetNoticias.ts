@@ -1,13 +1,48 @@
-import { INoticiasNormalizadas } from "../Noticias";
+import { INoticiasNormalizadas } from "../types";
 import { useState, useEffect } from 'react';
-import { obtenerInformacion } from "./fetchNoticias";
+import { obtenerInformacion } from "../api/fetchNoticias";
 
-const useGetNoticias = (): INoticiasNormalizadas[] => {
-  const [ noticias, setNoticias ] = useState<INoticiasNormalizadas[]>([])
+interface INoticiasGet {
+  noticias: INoticiasNormalizadas[],
+  isLoading?: boolean,
+  error?: Error
+}
+
+const initialState: INoticiasGet = {
+  noticias: [],
+  isLoading: true
+}
+
+const useGetNoticias = (): INoticiasGet => {
+  const [ noticiasData, setNoticiasData ] = useState<INoticiasGet>(initialState)
+
   useEffect(() => {
-    obtenerInformacion(setNoticias)
-  })
-  return noticias;
+    const fetchData = async () => {
+      try {
+        setNoticiasData((prevState) => ({
+          ...prevState,
+          isLoading: true,
+        }))
+
+        const data: INoticiasNormalizadas[] = await obtenerInformacion()
+        
+        setNoticiasData((prevState) => ({
+          ...prevState,
+          noticias: data,
+          isLoading: false
+        }))
+      } catch (error: any) {
+        setNoticiasData((prevState) => ({ 
+          ...prevState, 
+          isLoading: false,
+          error: error
+        }))
+      }
+    }
+
+    fetchData()
+  }, [])
+  return noticiasData;
 }
 
 export default useGetNoticias;

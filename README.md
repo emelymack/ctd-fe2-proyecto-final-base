@@ -58,7 +58,7 @@ Los siguientes aspectos son _extras_ al requisito mínimo de aprobación que ser
       * Se valorará el correcto uso de la documentación en todas las funciones y componentes en caso de ser necesario.
 
     Validaciones
-      * Se valorará el agregado de validaciones de flujos alternativos al normal y el manejo de errores en las distintas funcionalidades implementadas. ((ERROR BOUNDARY))
+      * Se valorará el agregado de validaciones de flujos alternativos al normal y el manejo de errores en las distintas funcionalidades implementadas.
 
     Testing unitario y coverage
       * Se valorará el correcto uso del testing unitario y el incremento del porcentaje de cobertura de código (coverage) más allá del 50%.

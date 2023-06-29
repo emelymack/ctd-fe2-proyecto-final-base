@@ -1,9 +1,8 @@
-import { Dispatch, SetStateAction } from "react";
 import { obtenerNoticias } from "../fakeRest";
-import { INoticiasNormalizadas } from "../Noticias";
 import { capitalize, getMinutosTranscurridos } from '../../../app/utils';
 
-export const obtenerInformacion = async (setNoticias: Dispatch<SetStateAction<INoticiasNormalizadas[]>>) => {
+// export const obtenerInformacion = async (setNoticias: Dispatch<SetStateAction<INoticiasNormalizadas[]>>) => {
+export const obtenerInformacion = async () => {
   const respuesta = await obtenerNoticias();
 
   const data = respuesta.map((noticia) => {
@@ -21,6 +20,5 @@ export const obtenerInformacion = async (setNoticias: Dispatch<SetStateAction<IN
       descripcionCorta
     };
   });
-
-  setNoticias(data);
+  return data;
 };
