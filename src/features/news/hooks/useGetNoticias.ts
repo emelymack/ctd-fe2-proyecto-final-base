@@ -13,6 +13,10 @@ const initialState: INoticiasGet = {
   isLoading: true
 }
 
+/**
+ * Hook para obtener las notiicas
+ * @returns {Array} array de noticias
+ */
 const useGetNoticias = (): INoticiasGet => {
   const [ noticiasData, setNoticiasData ] = useState<INoticiasGet>(initialState)
 

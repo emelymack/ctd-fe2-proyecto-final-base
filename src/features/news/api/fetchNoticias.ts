@@ -1,8 +1,12 @@
 import { obtenerNoticias } from "../fakeRest";
 import { capitalize, getMinutosTranscurridos } from '../../../app/utils';
+import { INoticiasNormalizadas } from "../types";
 
-// export const obtenerInformacion = async (setNoticias: Dispatch<SetStateAction<INoticiasNormalizadas[]>>) => {
-export const obtenerInformacion = async () => {
+/**
+ * Función que maneja el fetch de noticias
+ * @returns array de noticias normalizadas
+ */
+export const obtenerInformacion = async (): Promise<INoticiasNormalizadas[]> => {
   const respuesta = await obtenerNoticias();
 
   const data = respuesta.map((noticia) => {

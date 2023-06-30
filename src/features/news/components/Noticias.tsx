@@ -36,9 +36,7 @@ const Noticias = () => {
     }, 1000)
   }
 
-  useEffect(() => {
-    console.log({noticias, error, isLoading});
-  }, [noticias])
+  useEffect(() => {}, [noticias])
 
   if(isLoading) return ( <Loading /> )
   if(error) return (

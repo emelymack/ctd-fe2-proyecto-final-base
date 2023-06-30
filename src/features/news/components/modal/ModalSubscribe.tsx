@@ -3,6 +3,12 @@ import { BotonSuscribir, ContenedorTexto, DescripcionModal, ImagenModal, TituloM
 import { SuscribeImage } from "../../../../assets";
 import { IModalSubscribe } from '../../types';
 
+/**
+ * Modal para indicar que el usuario necesita suscribirse para visualizar la noticia
+ * @param {Function} onClose función que se ejecutará para cerrar el modal
+ * @param {Function} onSubscribe función que se ejecutará cuando el usuario haga click para suscribirse
+ * @returns {JSX.Element} componente Modal
+ */
 const ModalSubscribe = ({onClose, onSubscribe}: IModalSubscribe) => {
   return (
     <ContainerModal onClose={onClose}>
